@@ -1,0 +1,152 @@
+.stage-cube-cont{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 18%;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}
+
+.about-section{
+    margin-top: -15rem;
+    margin-left: -4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-mee{
+    margin-top: -5rem;
+    width: 35%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, #303030, transparent);
+    display: grid;
+    place-items: center;
+}
+
+.about-me-image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+}
+
+.about-me-image:hover{
+    transform: rotate(0deg);
+}
+
+.about-me-image img{
+    width: 100%;
+}
+
+.about-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8rem;
+    margin-top: 4rem;
+
+    .about-card{
+        background: #115173;
+        border: 1px solid transparent;
+        width: 100%;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+        transition: all 400ms ease;
+
+        &:hover{
+            background: transparent;
+            border-color: #8f8f8f;
+            cursor: default;
+        }
+    
+        .about-icon{
+            font-size: 2.5rem;
+            margin-top: 0.4rem;
+        }
+
+        h5{
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        small{
+            font-size: 1.3rem;
+            color: rgb(189, 189, 189);
+            position: relative;
+            top: -1rem;
+        }
+    }
+}
+
+
+.cubespinner{
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+
+    div{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #78CAFD;
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow:  0 0 20px 0px #78CAFD;
+        border-radius: 20px;
+    }
+
+    .face1{
+        transform: translateZ(100px);
+    }
+    .face2{
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .face3{
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+    .face4{
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face5{
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face6{
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+}
+
+@keyframes spincube {
+    from,
+    to{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66%{
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    83%{
+        transform: rotateX(90deg);
+    }
+
+}

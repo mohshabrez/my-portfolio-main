@@ -1,0 +1,176 @@
+.myWork-page{
+    overflow-x: auto;
+    .text-zone{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+
+        h1{
+            font-size: 53px;
+            font-family: 'Coolvetica';
+            color: #78CAFD;
+            font-weight: 400;
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 40px;
+            left: 10px;
+            letter-spacing: 2px;
+
+            &::before{
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                font-size: 18px;
+                position: absolute;
+                margin-top: -10px;
+                left: -10px;
+                opacity: 0.6;
+                line-height: 18px;
+                color:#ffd700 ;
+            }
+
+            &::after{
+                content: '<h1/>';
+                font-family: 'La Belle Aurore';
+                font-size: 18px;
+                position: absolute;
+                left: -30px;
+                margin-left: 20px;
+                bottom: -20px;
+                opacity: 0.6;
+                line-height: 18px;
+                color:#ffd700 ;
+            }
+
+        }
+
+        p{
+            font-style: 13px;
+            font-size: larger;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 300;
+            min-width: fit-content;
+            animation: pulse 1s;
+
+            &:nth-of-type(1){
+                animation-delay: 1s;
+            }
+            &:nth-of-type(2){
+                animation-delay: 1.2s;
+            }
+            &:nth-of-type(3){
+                animation-delay: 1.4s;
+            }
+        }
+
+        h2{
+            color: #fff;
+            font-weight:bolder;
+            font-family: sans-serif;
+            font-size: 22px;
+            letter-spacing: 1px;
+            animation: fadeIn 1s 1.8s backwards;
+        }
+
+        .projectCard{
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            animation: bounceIn 1s 1s;
+            animation-fill-mode: forwards;
+            margin-top: 4rem;
+
+            .work-icon-left{
+                font-size: 300%;
+                margin-top: 7rem;
+                margin-left: -5rem;
+                cursor: pointer;
+
+                &:hover{
+                    box-shadow:  0 0 10px 0px #bbd4e5;
+                    border-radius: 50%;
+                }
+            }
+            
+            .work-icon-right{
+                font-size: 300%;
+                margin-top: 7rem;
+                margin-right: -5rem;
+                cursor: pointer;
+
+                &:hover{
+                    box-shadow:  0 0 10px 0px #bbd4e5;
+                    border-radius: 50%;
+                }
+            }
+        
+            .proCard{
+                width: 100%;
+                height: auto;
+                background-color: rgb(6, 6, 6);
+                border-radius: 20px;
+                box-shadow:  0 0 10px 0px #bbd4e5;
+                cursor: pointer;
+        
+                &:hover{
+                    transform: scale(1.3)
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                }
+        
+                h2{
+                    position: relative;
+                    text-align: center;
+                    top: -8rem;
+                    color: #ffd700;
+                    font-size: 18px;
+                    letter-spacing: 0.2px;
+                }
+
+                .probtns{
+                    position: relative;
+                    top: -3rem;
+                    left: 8rem;
+                    display: flex;
+                    gap: 2rem;
+
+                    .flat-button{
+                        background-color: #000;
+                        color: #ffffff;
+                        font-family: sans-serif;
+                        text-decoration: none;
+                        padding: 6px 7px;
+                        border: 1px solid #bbd4e5 ;
+                        float: left;
+                        animation: fadeIn 1s 1.8s backwards;
+                        white-space: nowrap;
+                        border-radius: 10px;
+                
+                        &:hover{
+                            background-color: transparent;
+                            color: #bbbbbb;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .text-animate-hover{
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+
